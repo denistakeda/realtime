@@ -29,6 +29,8 @@ func main() {
 		// Handle WebSocket connection
 		go handleWebSocketConnection(conn)
 	})
+  r.Static("/static", "./static")
+  r.StaticFile("/", "./static/index.html")
 
 	r.Run(":8080")
 }
