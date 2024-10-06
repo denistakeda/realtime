@@ -1,0 +1,14 @@
+services:
+  server:
+    image: cosmtrek/air
+    working_dir: /server
+    ports:
+      - "8080:8080"
+      - "3200:3200"
+    volumes:
+      - ./:/server/
+
+
+volumes:
+  db:
+    driver: local
